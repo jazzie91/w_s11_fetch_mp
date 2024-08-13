@@ -29,7 +29,6 @@ export default function DogForm({ dog, reset, getDogs }) {
       .then(res => {
         if (!res.ok) throw new Error('Problem POSTing dog')
         getDogs()
-        reset()
         navigate('/')
       })
       .catch(err => console.error(err))
